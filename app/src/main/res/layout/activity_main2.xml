@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Main2Activity"
+    android:gravity="center"
+    android:padding="20dp">
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/loadimage"
+        android:background="@drawable/rounded_edittext"
+        android:src="@drawable/images"/>
+
+
+    <EditText
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/loadTittle"
+        android:textColor="@color/text"
+        android:background="@drawable/rounded_edittext"
+        android:hint="Movie Name "/>
+
+
+
+    <EditText
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:id="@+id/loadDate"
+        android:background="@drawable/edittext_bg"
+        android:textColor="@color/text"
+        android:hint="Movie Date "/>
+
+
+    <Button
+        android:id="@+id/Done"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:background="@drawable/mybutton"
+        android:onClick="Donee"
+        android:layout_marginTop="10dp"
+        android:text="Done !" />
+
+
+</LinearLayout>
