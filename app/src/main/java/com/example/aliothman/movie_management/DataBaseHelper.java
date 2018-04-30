@@ -23,12 +23,6 @@ public class DataBaseHelper extends SQLiteOpenHelper {
     private static final String COLUMN_DATE = "moviedate";
 
 
-//    private static final String DATABASE_NAME = "mydbnamedb";
-//    private static final int DATABASE_VERSION = 1;
-//
-//    private static final String DATABASE_CREATE_MOVIE_ITEM = "create table Movie (id integer primary key autoincrement" + ",image text not null,tittle text not null, date text not null);";
-
-
     public  DataBaseHelper (Context context){
         super(context ,DATABASE_NAME ,null , DATABASE_VERSION);
     }
@@ -60,43 +54,6 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         db.insert(TABLE_MOVIES, null, values);
     }
 
-
-//    public long insertnewMovie(String img, String tittle,String date) {
-//        SQLiteDatabase db = this.getWritableDatabase();
-//        ContentValues values = new ContentValues();
-//        values.put("img", img);
-//        values.put("tittle", tittle);
-//        values.put("date", date);
-//        return db.insert("Movie", null, values);
-//    }
-
-
-//    public List<Movie> getAllMovies() {
-//        List<Movie> notes = new ArrayList<>();
-//
-//        // Select All Query
-//        String selectQuery = "SELECT  * FROM " + "Movie" ;
-//
-//        SQLiteDatabase db = this.getWritableDatabase();
-//        Cursor cursor = db.rawQuery(selectQuery, null);
-//
-//        // looping through all rows and adding to list
-//        if (cursor.moveToFirst()) {
-//            do {
-//                Movie movie = new Movie(cursor.getString(cursor.getColumnIndex("image")),
-//                        cursor.getString(cursor.getColumnIndex("tittle")),
-//                        cursor.getString(cursor.getColumnIndex("date"))) ;
-//
-//                notes.add(movie);
-//            } while (cursor.moveToNext());
-//        }
-//
-//        // close db connection
-//        db.close();
-//
-//        // return notes list
-//        return notes;
-//    }
 
     public List<Movie> listProducts(){
         String sql = "select * from " + TABLE_MOVIES;
